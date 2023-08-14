@@ -1,0 +1,115 @@
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+}
+
+.container {
+    background: url(imgs/clavier_BG.jpg) no-repeat center center;
+    background-size: cover;
+    /* filter: blur(2px); */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.container h1 {
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.container #btn {
+    padding: 6px;
+    border-radius: 8px;
+    background-color: red;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.container #btn:hover {
+    opacity: .8;
+}
+
+.popup {
+    background: url(imgs/clavier_blanc.jpg) no-repeat center center;
+    background-size: cover;
+    width: 25%;
+    height: 150px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    border-radius: 12px;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    gap: 15px;
+    overflow: hidden;
+    transition: .3s;
+    opacity: 0;
+}
+
+.popup.show {
+    opacity: 1;
+    top: 40%;
+}
+
+.popup #btn_close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 6px;
+    border-radius: 6px;
+    background-color: red;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.popup #btn_close:hover {
+    opacity: .5;
+}
+
+.popup h3 {
+    padding: 15px 0 0;
+    color: blueviolet;
+    font-weight: 700;
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.popup form input {
+    border: 1px solid #000;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.popup form input[type="submit"] {
+    background-color: green;
+    color: #fff;
+}
